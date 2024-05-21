@@ -1,0 +1,29 @@
+@use '../node_modules/utopia-core-scss/src/utopia' as utopia;
+@import 'tokens';
+
+:root {
+	@include utopia.generateClamps((
+		"minWidth": 320,
+		"maxWidth": 768,
+		"pairs": (
+				(16, 20),
+				(20, 38)
+		),
+		"prefix": "fluid-",
+		"usePx": true,
+	));
+}
+
+.btn {
+	padding: $Padding-S $Padding-XL;
+	background-color: $PrimeColor;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: var(--fluid-16-20);
+}
+
+.btn:hover {
+	background-color: darkblue;
+}
